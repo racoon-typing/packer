@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Упаковщик</title>
+</head>
+
+<body class="page__body">
+    <!-- Хедер -->
+    <header class="header">
+        <h1 class="header__mainTitle">
+            Упаковщик
+        </h1>
+
+        <h2 class="header__title">
+            Вы можете рассчитать необхоимое кол-во коробок для поставки
+        </h2>
+    </header>
+
+    <!-- Мейн -->
+    <main class="main">
+        <div class="main__calculator calculator">
+            <form class="calculator__form">
+                <!-- Кол-во товаров -->
+                <div class="calculator__input-wrapper">
+                    <label for="number">Введите кол-во товаров для поставки, в шт</label>
+                    <input class="calculator__input" id="number" name="number" type="text" placeholder="5">
+                </div>
+
+                <!-- Длина -->
+                <div class="calculator__input-wrapper">
+                    <label for="length">Введите длину товара, в см</label>
+                    <input class="calculator__input" id="length" name="length" type="text" placeholder="40">
+                </div>
+                
+                <!-- Ширина -->
+                <div class="calculator__input-wrapper">
+                    <label for="width">Введите ширину товара, в см</label>
+                    <input class="calculator__input" id="width" name="width" type="text" placeholder="23">
+                </div>
+                
+                <!-- Высота -->
+                <div class="calculator__input-wrapper">
+                    <label for="height">Введите высоту товара, в см</label>
+                    <input class="calculator__input" id="height" name="height" type="text" placeholder="5">
+                </div>
+
+                <button class="calculator__button" type="submit">
+                    Рассчитать
+                </button>
+            </form>
+        </div>
+
+        <div class="main__result result">
+            <img class="result__img" src="img/korob.webp" alt="">
+
+            <table class="result__default-box">
+                <tr>
+                  <th>Название</th>
+                  <th>Размер, см</th>
+                  <th>Объем, м^3</th>
+                  <th>Кол-во, шт</th>
+                  <th>Товаров в коробке, шт</th>
+                </tr>
+                <tr>
+                  <td>Коробка L</td>
+                  <td>60 * 40 * 40</td>
+                  <td>
+                    <span id="big-box-volume"></span>
+                  </td>
+                  <td>
+                    <span id="big-box-number"></span>
+                  </td>
+                  <td>
+                    <span id="big-box-products"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Коробка M</td>
+                  <td>40 * 40 * 40</td>
+                  <td >
+                    <span id="medium-box-volume"></span>
+                  </td>
+                  <td>
+                    <span id="medium-box-number"></span>
+                  </td>
+                  <td>
+                    <span id="medium-box-products"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Коробка S</td>
+                  <td>25 * 25 * 15</td>
+                  <td>
+                    <span id="little-box-volume"></span>
+                  </td>
+                  <td>
+                    <span id="little-box-number"></span>
+                  </td>
+                  <td>
+                    <span id="little-box-products"></span>
+                  </td>
+                </tr>
+            </table>
+
+            <p class="result__volume">
+                Объем поставки, в м^3:
+
+                <span id="product-volume"></span>
+            </p>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

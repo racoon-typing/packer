@@ -1,0 +1,102 @@
+.page__body {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;  
+}
+
+/* Хедер */
+/* .header {
+  
+} */
+
+.header__mainTitle {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Мейн */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.main__calculator  {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+
+/* Калькулятор */
+.calculator {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator__form {
+    background-color: #eee;
+    padding: 20px 10px;
+}
+
+.calculator__input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator__input {
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-top: 4px;
+}
+
+.calculator__button {
+    min-width: 100px;
+    min-height: 40px;
+    background-color: #fff;
+    border: 1px solid #999;
+    margin-top: 20px;
+}
+
+/* Результат */
+.result__img {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.result__volume {
+    margin: 0;
+}
+
+.result__volume span {
+    padding-left: 1px;
+}
+
+/* Таблица с характеристиками коробок и результатом подсчета */
+.result__default-box {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-bottom: 20px;
+}
+
+.result__default-box th,
+.result__default-box td {
+    border: 1px solid #000;
+    padding: 4px;
+}
+
+.result__default-box tr td {
+    text-align: center;
+}
+
